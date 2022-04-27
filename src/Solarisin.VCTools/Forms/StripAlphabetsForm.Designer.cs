@@ -1,4 +1,4 @@
-﻿namespace VCTools
+﻿namespace Solarisin.VCTools.Forms
 {
     partial class StripAlphabetsForm
     {
@@ -48,7 +48,7 @@
 			this.button_Strip.TabIndex = 0;
 			this.button_Strip.Text = "Strip";
 			this.button_Strip.UseVisualStyleBackColor = true;
-			this.button_Strip.Click += new System.EventHandler(this.button_Strip_Click);
+			this.button_Strip.Click += new System.EventHandler(this.Button_Strip_Click);
 			// 
 			// textBox_Alphabets
 			// 

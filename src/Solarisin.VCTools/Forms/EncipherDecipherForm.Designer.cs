@@ -1,4 +1,4 @@
-﻿namespace VCTools
+﻿namespace Solarisin.VCTools.Forms
 {
     partial class EncipherDecipherForm
     {
@@ -59,7 +59,7 @@
             // 
             // textBox_PlainText
             // 
-            this.textBox_PlainText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox_PlainText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_PlainText.Location = new System.Drawing.Point(15, 25);
             this.textBox_PlainText.Multiline = true;
@@ -69,7 +69,7 @@
             // 
             // textBox_CipherText
             // 
-            this.textBox_CipherText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox_CipherText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_CipherText.Location = new System.Drawing.Point(15, 240);
             this.textBox_CipherText.Multiline = true;
@@ -85,7 +85,7 @@
             this.button_Encipher.TabIndex = 7;
             this.button_Encipher.Text = "↓ Encipher";
             this.button_Encipher.UseVisualStyleBackColor = true;
-            this.button_Encipher.Click += new System.EventHandler(this.button_Encipher_Click);
+            this.button_Encipher.Click += new System.EventHandler(this.Button_Encipher_Click);
             // 
             // button_Decipher
             // 
@@ -96,7 +96,7 @@
             this.button_Decipher.TabIndex = 7;
             this.button_Decipher.Text = "Decipher ↑";
             this.button_Decipher.UseVisualStyleBackColor = true;
-            this.button_Decipher.Click += new System.EventHandler(this.button_Decipher_Click);
+            this.button_Decipher.Click += new System.EventHandler(this.Button_Decipher_Click);
             // 
             // textBox_Key
             // 

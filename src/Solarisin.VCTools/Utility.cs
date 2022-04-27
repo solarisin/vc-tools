@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace VCTools
+namespace Solarisin.VCTools
 {
-    class Utility
+    internal static class Utility
     {
-        public static int[] CountLetters(string i_message)
+        public static int[] CountLetters(string message)
         {
-            string message = i_message.ToUpper();
-
             int[] letters = new int[26];
 
             // Initialize the counts...
@@ -18,7 +13,7 @@ namespace VCTools
                 letters[i] = 0;
 
             // Count the letters...
-            foreach (char c in message)
+            foreach (char c in message.ToUpper())
             {
                 if (c >= 65 && c <= 90)
                 {
@@ -29,16 +24,15 @@ namespace VCTools
             return letters;
         }
 
-        public static bool IsValidInteger(String text)
+        public static bool IsValidInteger(string text)
         {
-            int number = 0;
-            bool canConvert = int.TryParse(text, out number);
+            bool canConvert = int.TryParse(text, out _);
             return canConvert;
         }
 
-        public static string StripIllegalChars(String text)
+        public static string StripIllegalChars(string text)
         {
-            String result = "";
+            string result = "";
             foreach (char c in text.ToUpper())
             {
                 if (c.CompareTo('A') >= 0 && c.CompareTo('Z') <= 0)
@@ -49,9 +43,9 @@ namespace VCTools
             return result;
         }
 
-        public static double GetFriedman(String message)
+        public static double GetFriedman(string message)
         {
-            String stripped = StripIllegalChars(message);
+            string stripped = StripIllegalChars(message);
             int[] arrayOfInt = CountLetters(message);
             double msgLen = stripped.Length;
 
@@ -63,19 +57,18 @@ namespace VCTools
             return value;
         }
 
-        public static String[] StripAlphabets(String message, int length)
+        public static string[] StripAlphabets(string message, int length)
         {
-            String[] result = new String[length];
-            char[] lettersArry = message.ToCharArray();
-            char[] pageArry = null;
+            string[] result = new string[length];
+            char[] lettersArray = message.ToCharArray();
             for (int i = 0; i < length; i++)
             {
-                pageArry = new char[Convert.ToInt32(message.Length / length) + 1];
+                var pageArray = new char[Convert.ToInt32(message.Length / length) + 1];
                 for (int j = i, k = 0; j < message.Length; j += length, k++)
                 {
-                    pageArry[k] = lettersArry[j];
+                    pageArray[k] = lettersArray[j];
                 }
-                result[i] = new String(pageArry);
+                result[i] = new string(pageArray);
             }
             return result;
         }

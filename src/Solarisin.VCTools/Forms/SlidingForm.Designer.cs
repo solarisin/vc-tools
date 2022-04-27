@@ -1,4 +1,4 @@
-﻿namespace VCTools
+﻿namespace Solarisin.VCTools.Forms
 {
     partial class SlidingForm
     {
